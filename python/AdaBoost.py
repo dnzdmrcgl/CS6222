@@ -14,7 +14,7 @@ def GetAdaBoostClassifier(X, y):
 
 # Evaluate by cross validation
 def EvaluateAdaBoost(X, y, scoring = None):
-    clf = AdaBoostClassifier(n_estimators=1000)
+    clf = AdaBoostClassifier(n_estimators=100)
     scores = cross_val_score(clf, X, y, scoring= scoring)
     return scores.mean()
 

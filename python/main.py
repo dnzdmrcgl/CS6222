@@ -27,7 +27,7 @@ def testWithFileName(filename):
     print
 
 if __name__ == '__main__':
-    filename = '../features/real1Features.csv'
+    filename = '../features/real2Features.csv'
     testWithFileName(filename)
     for i in range(1,6):
         filename = '../features/syn' + str(i) + 'Features.csv'
