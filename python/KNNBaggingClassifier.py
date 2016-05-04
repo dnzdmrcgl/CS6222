@@ -7,6 +7,7 @@ bagging = BaggingClassifier(KNeighborsClassifier(), max_samples=0.5, max_feature
 iris = load_iris()
 
 bagging.fit(iris.data, iris.target)
+print iris.target
 
 scores = cross_val_score(bagging, iris.data, iris.target)
 print scores.mean()

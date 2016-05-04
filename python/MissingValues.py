@@ -4,10 +4,21 @@
 # stolbetz
 import numpy as np
 from sklearn.preprocessing import Imputer
-imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
-X_full = np.array([[1, 2], [np.nan, 3], [7, 6]])
-imp.fit(X_full)
 
-X_tests= [[np.nan, 2], [6, np.nan]]
+# Return Imputer instance
+# to fill missing values need to apply transform
+def MisingValuesFiller(X_train):
+    imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
+    X_full = np.array(X_train)
+    imp.fit(X_full)
+    #print X_full
+    X_tests= [[np.nan, 2], [6, np.nan]]
 
-print(imp.transform(X_tests))
+    #print(imp.transform(X_tests))
+    return imp
+
+if __name__ == "__main__":
+    X_train = [[1, 2], [np.nan, 3], [7, 6]]
+
+    imp = MisingValuesFiller(X_train)
+    print imp.transform(X_train)
