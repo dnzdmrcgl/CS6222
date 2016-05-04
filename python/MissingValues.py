@@ -1,4 +1,6 @@
-# NOTE: should do it before normalization
+
+# A class to treat missing values  in the data - they are replaced by the mean of the corresponding feature
+
 
 # feature is a column,
 # stolbetz

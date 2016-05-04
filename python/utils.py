@@ -3,8 +3,6 @@ import numpy as np
 from sklearn.cross_validation import train_test_split
 
 
-X, y = np.arange(10).reshape((5, 2)), range(5)
-
 
 # Splits dataset into test and train parts
 def SplitTestTrain(X_total, y_total):

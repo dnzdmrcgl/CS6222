@@ -5,7 +5,8 @@ from sklearn.feature_selection import SelectFromModel
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
 
-
+# Random Forest Classifier with feature selection
+# First it selects the most important features and then applies a random forest classifier
 
 def GetRFClassifier(X, y):
   clf = Pipeline([
