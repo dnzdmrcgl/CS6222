@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 
 def GetAdaKNNBaggingClassifier(X, y):
-    clf  = BaggingClassifier(KNeighborsClassifier(), max_samples=0.5, max_features=0.5)
+    clf  = BaggingClassifier(KNeighborsClassifier(), max_samples=0.7, max_features=0.7)
     clf.fit(X, y)
     return clf
 

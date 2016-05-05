@@ -1,0 +1,87 @@
+score is recall
+Ada Boost score 0.823529411765
+Random forest with feature extraction score 0.814117647059
+KNN Bagging score 0.755294117647
+
+Ada Boost score 0.831162196679
+Random forest with feature extraction score 0.824249680715
+KNN Bagging score 0.773547254151
+
+Ada Boost score 0.956782391445
+Random forest with feature extraction score 0.956497492404
+KNN Bagging score 0.934044780795
+
+Ada Boost score 0.950686206094
+Random forest with feature extraction score 0.93975343103
+KNN Bagging score 0.934406269435
+
+Ada Boost score 0.906656163844
+Random forest with feature extraction score 0.902586320074
+KNN Bagging score 0.899698043849
+
+Ada Boost score 0.745340731256
+Random forest with feature extraction score 0.822592118367
+KNN Bagging score 0.771447196887
+
+Ada Boost score 0.947973516085
+Random forest with feature extraction score 0.948400140775
+KNN Bagging score 0.954305602335
+
+score is precision
+Ada Boost score 0.680970212192
+Random forest with feature extraction score 0.680171591992
+KNN Bagging score 0.680245554332
+
+Ada Boost score 0.675131348511
+Random forest with feature extraction score 0.675131348511
+KNN Bagging score 0.687298800117
+
+Ada Boost score 0.707988238177
+Random forest with feature extraction score 0.700785340314
+KNN Bagging score 0.728145554848
+
+Ada Boost score 0.720771525915
+Random forest with feature extraction score 0.704343028297
+KNN Bagging score 0.723929858664
+
+Ada Boost score 0.737427129906
+Random forest with feature extraction score 0.736620564605
+KNN Bagging score 0.764032339174
+
+Ada Boost score 0.760402470795
+Random forest with feature extraction score 0.659962984999
+KNN Bagging score 0.750602942594
+
+Ada Boost score 0.997718356323
+Random forest with feature extraction score 0.997697314172
+KNN Bagging score 0.997963673938
+
+score is f1
+Ada Boost score 0.588939041878
+Random forest with feature extraction score 0.576789913115
+KNN Bagging score 0.544109754517
+
+Ada Boost score 0.577262520168
+Random forest with feature extraction score 0.578780285422
+KNN Bagging score 0.576881381163
+
+Ada Boost score 0.718460120308
+Random forest with feature extraction score 0.702858060962
+KNN Bagging score 0.710813985354
+
+Ada Boost score 0.735269097798
+Random forest with feature extraction score 0.702719941242
+KNN Bagging score 0.739367240013
+
+Ada Boost score 0.730224489307
+Random forest with feature extraction score 0.728077908452
+KNN Bagging score 0.757029149027
+
+Ada Boost score 0.62855802509
+Random forest with feature extraction score 0.645872049118
+KNN Bagging score 0.704398516003
+
+Ada Boost score 0.970657794115
+Random forest with feature extraction score 0.970766925334
+KNN Bagging score 0.998463687694
+
