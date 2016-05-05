@@ -6,9 +6,10 @@ from KNNBaggingClassifier import EvaluateKNNBagging
 from DataNormalization import DataNormalizer
 from utils import DataSetReader
 
-def testWithFileName(imput_data_filename,output_file, scoring):
-    print imput_data_filename
-    X, y = DataSetReader(imput_data_filename)
+def testWithFileName(input_data_filename,output_file, scoring):
+    print input_data_filename
+    output_path.write(input_data_filename + '\n')
+    X, y = DataSetReader(input_data_filename)
 
     # scoring = None
     #scoring = 'f1'
