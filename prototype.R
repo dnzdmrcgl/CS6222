@@ -213,6 +213,7 @@ syn3.data <- loadTrainingData(parentDirectory = '../data/training/', directory =
 syn4.data <- loadTrainingData(parentDirectory = '../data/training/', directory = 'syn4')
 syn5.data <- loadTrainingData(parentDirectory = '../data/training/', directory = 'syn5')
 real1.data <- loadTrainingData(parentDirectory = '../data/training/', directory = 'real1')
+real2.data <- loadTrainingData(parentDirectory = '../data/training/', directory = 'real2')
 
 # Create the table structure that contains the SNP calls for the union of all candidate SNPs
 syn1.predictions <- getAllPredictions(syn1.data)
@@ -221,6 +222,7 @@ syn3.predictions <- getAllPredictions(syn3.data)
 syn4.predictions <- getAllPredictions(syn4.data)
 syn5.predictions <- getAllPredictions(syn5.data)
 real1.predictions <- getAllPredictions(real1.data)
+real2.predictions <- getAllPredictions(real2.data)
 
 # Sample run with specified sampling number and rate for all samples
 numberOfSampling <- 9
@@ -232,6 +234,7 @@ multipleSamplingRun(syn3.predictions, syn3.predictions, numberOfSampling, sampli
 multipleSamplingRun(syn4.predictions, syn4.predictions, numberOfSampling, samplingPercentage)
 multipleSamplingRun(syn5.predictions, syn5.predictions, numberOfSampling, samplingPercentage)
 multipleSamplingRun(real1.predictions, real1.predictions, numberOfSampling, samplingPercentage)
+multipleSamplingRun(real2.predictions, real2.predictions, numberOfSampling, samplingPercentage)
 
 # Calculate the f1 score, precision and recall for each classifier on each sample data
 
@@ -265,6 +268,11 @@ evaluatePerformance(real1.predictions$mutectSNP, real1.predictions$truthTable)
 evaluatePerformance(real1.predictions$vardictSNP, real1.predictions$truthTable)
 evaluatePerformance(real1.predictions$varscanSNP, real1.predictions$truthTable)
 
+evaluatePerformance(real2.predictions$freebayesSNP, real2.predictions$truthTable)
+evaluatePerformance(real2.predictions$mutectSNP, real2.predictions$truthTable)
+evaluatePerformance(real2.predictions$vardictSNP, real2.predictions$truthTable)
+evaluatePerformance(real2.predictions$varscanSNP, real2.predictions$truthTable)
+
 #################################################################################
 # Calculate the f1 scores, precision and recall for different samling rates and sampling times
 # Store the calculated values in the performance folder in seralized manner
@@ -291,7 +299,9 @@ saveRDS(syn5.performance, file = './performance/syn5Performace.rds')
 sampleName <- 'real1'
 real1.performance <- getPerformance(real1.predictions, sampleName, samplingRates, samplingNumber)
 saveRDS(real1.performance, file = './performance/real1Performace.rds')
-
+sampleName <- 'real2'
+real2.performance <- getPerformance(real2.predictions, sampleName, samplingRates, samplingNumber)
+saveRDS(real2.performance, file = './performance/real2Performace.rds')
 
 ###########################
 # The first part is to generate the predictions and caldulate the f1 scores, precision & recall
@@ -304,6 +314,7 @@ syn3.performance <- readRDS('./performance/syn3Performace.rds')
 syn4.performance <- readRDS('./performance/syn4Performace.rds')
 syn5.performance <- readRDS('./performance/syn5Performace.rds')
 real1.performance <- readRDS('./performance/real1Performace.rds')
+real2.performance <- readRDS('./performance/real2Performace.rds')
 
 dir.create(file.path('./plots'), showWarnings = FALSE)
 plotPerformance(syn1.performance, 'syn1')
@@ -312,6 +323,7 @@ plotPerformance(syn3.performance, 'syn3')
 plotPerformance(syn4.performance, 'syn4')
 plotPerformance(syn5.performance, 'syn5')
 plotPerformance(real1.performance, 'real1')
+plotPerformance(real2.performance, 'real2')
 
 
 
